@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Skills | KS Portfolio</title>
+	<link rel="icon" href="images/favicon.png" type="image/png">
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/skills.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<h1><a href="index.html">KS Page</a></h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Top</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="skills.html">Skills</a></li>
+				<li><a href="works.html">Works</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="skills-area">
+
+		<h2 class="section-title fade-up">SKILLS</h2>
+
+		<div class="skill-grid">
+
+			<div class="skill-card fade-up">
+				<img src="images/html.png" alt="HTML">
+				<h3>HTML</h3>
+
+				<p>Webサイトの構造設計や
+					セマンティックなマークアップができます。SEO を意識することを大切にしています。
+				</p>
+			</div>
+
+			<div class="skill-card fade-up">
+				<img src="images/css.png" alt="CSS">
+				<h3>CSS</h3>
+				<p>
+					FlexboxやGridを使用したレイアウト制作や、レスポンシブ対応を行うことができます。
+				</p>
+			</div>
+
+			<div class="skill-card fade-up">
+				<img src="images/ps.png" alt="Photoshop">
+				<h3>Photoshop</h3>
+				<p>
+					画像の切り抜きや色調補正、
+					Webサイト用の画像加工ができます。
+				</p>
+			</div>
+
+			<div class="skill-card fade-up">
+				<img src="images/ai.png" alt="Illustrator">
+				<h3>Illustrator</h3>
+				<p>
+					アイコンや簡単なイラスト制作、
+					簡単なSVGデータの作成ができます。
+				</p>
+			</div>
+
+		</div>
+
+	</section>
+
+	<script>
+		const fadeElements = document.querySelectorAll('.fade-up');
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('show');
+				}
+			});
+		}, {
+			threshold: 0.15
+		});
+
+		fadeElements.forEach((el) => observer.observe(el));
+	</script>
+
+</body>
+
+</html>

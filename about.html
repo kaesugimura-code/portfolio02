@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About | KS Portfolio</title>
+	<link rel="icon" href="images/favicon.png" type="image/png">
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+	<header>
+		<h1><a href="index.html">KS Page</a></h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Top</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="skills.html">Skills</a></li>
+				<li><a href="works.html">Works</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="about-area">
+
+		<div class="memo">
+
+
+			<div class="profile-block fade-up">
+
+				<div class="text">
+
+					<h2 class="section-title">PROFILE</h2>
+					<p>
+						2000年生まれ。静岡県三島市出身。<br>
+						2026年Webデザインを学習。<br>
+						HTML・CSS・Photoshop・Illustratorを中心に勉強しました。<br>
+						SEOを意識した構造設計や
+						保守しやすいコーディングを意識しています。
+					</p>
+
+					<h2 class="section-title">JOURNEY</h2>
+					<p>
+						2026 2月 Webデザイン学習開始<br>
+						2026 6月 ポートフォリオ制作
+					</p>
+
+				</div>
+
+				<div class="about-photo">
+					<img src="images/kae.png" alt="プロフィール写真">
+				</div>
+
+			</div>
+			<div class="profile-block fade-up">
+				<div class="text">
+					<h2 class="section-title">FAVORITES</h2>
+					<p>
+						旅行 / 美術館巡り / 自然の中で過ごすこと
+					</p>
+					<p>旅行先で新しい文化や価値観に触れることが好きで、多様な視点や発想に出会うことを楽しんでいます。綺麗な空を見ると幸せを感じます。</p>
+				</div>
+				<div class="hobby-photo right slide-photo favorite-photo">
+					<img src="images/mountain.jpg" alt="旅行写真1">
+					<img src="images/lake.jpg" alt="旅行写真2">
+					<img src="images/florida.jpg" alt="旅行写真3">
+
+				</div>
+			</div>
+
+			<div class="words-block fade-up">
+
+				<h2 class="section-title">QUOTE</h2>
+				<p>
+					和を以て尊しと為す（わをもってとうとしとなす）
+				</p>
+				<p>
+					相手を思いやる気持ちや協調性を大切にしながら、<br>
+					人とのつながりを大事にしていきたいと考えています。
+				</p>
+
+			</div>
+
+		</div>
+
+		<div class="profile-block reverse fade-up">
+
+			<div class="hobby-photo slide-photo">
+				<img src="images/dora.jpg" alt="photo1">
+				<img src="images/flight.jpg" alt="photo2">
+				<img src="images/cilk.jpg" alt="photo3">
+			</div>
+
+			<div class="text">
+				<h2 class="section-title">LIKES</h2>
+				<p>ドラえもん / Nikon Zfc / 愛犬（しるく）</p>
+				<p>
+					休日はカメラを持って出かけ、
+					好きな景色や思い出を写真に残しています。
+				</p>
+			</div>
+
+		</div>
+		<div class="profile-block reverse fade-up">
+
+			<div class="text">
+				<h2 class="section-title">MBTI</h2>
+				<p>
+					性格診断：INFP（仲介者）
+				</p>
+				<p>
+					好奇心が強く、新しいことを学ぶのが好きです。
+					一方で、細かな部分までこだわりながら
+					丁寧に制作を進めることを大切にしています。
+				</p>
+			</div>
+			<div class="hobby-photo right">
+				<img src="images/infp01.jpg" alt="性格診断">
+			</div>
+		</div>
+	</section>
+
+	<script>
+		const fadeElements = document.querySelectorAll('.fade-up');
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('show');
+				}
+			});
+		}, {
+			threshold: 0.2
+		});
+
+		fadeElements.forEach((el) => observer.observe(el));
+	</script>
+</body>
+
+</html>
