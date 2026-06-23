@@ -1,0 +1,453 @@
+@charset "utf-8";
+
+/* リセット */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ヘッダー */
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 50px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	backdrop-filter: blur(10px);
+	z-index: 100;
+}
+
+header h1 {
+	font-size: 1rem;
+	font-weight: normal;
+	letter-spacing: .2em;
+	color: #555;
+}
+
+header ul {
+	display: flex;
+	gap: 30px;
+	list-style: none;
+}
+
+header a {
+	text-decoration: none;
+	font-size: .9rem;
+	transition: .3s;
+}
+
+
+header a:link {
+	color: #555;
+}
+
+header a:visited {
+	color: #6f6a66;
+}
+
+header a:hover {
+	color: #8f2f36;
+}
+
+/* ナビゲーション */
+
+nav ul li a {
+	position: relative;
+	z-index: 1;
+}
+
+nav ul li a::after {
+	content: "";
+	position: absolute;
+
+	width: 28px;
+	height: 28px;
+
+	background: url("../images/pink-cosmos.png") center/contain no-repeat;
+
+	left: 50%;
+	top: 75%;
+
+	opacity: 0;
+	transform: translate(-50%, -50%) scale(0.5);
+
+	transition: all 0.4s ease;
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+nav ul li a:hover::after {
+	opacity: 0.7;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+/* KS Page */
+
+header h1 a {
+	position: relative;
+	display: inline-block;
+	z-index: 1;
+}
+
+header h1 a::after {
+	content: "";
+	position: absolute;
+
+	width: 30px;
+	height: 30px;
+
+	background: url("../images/sakura.png") center/contain no-repeat;
+
+	left: 50%;
+	top: 65%;
+
+	opacity: 0;
+	transform: translate(-50%, -50%) scale(0.5);
+
+	transition: all 0.4s ease;
+
+	pointer-events: none;
+	z-index: -1;
+}
+
+
+
+header h1 a:hover::after {
+	opacity: 0.7;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+
+
+body {
+	background-color: #f7f3ea;
+	font-family: sans-serif;
+}
+
+.desktop {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+/* フォルダー */
+.folder {
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+	color: #333;
+	transition: .3s;
+}
+
+.folder img {
+	width: 140px;
+}
+
+.folder:hover {
+	transform: scale(1.1);
+}
+
+.folder p {
+	margin-top: 8px;
+	font-size: 1rem;
+	font-weight: 500;
+	letter-spacing: .05em;
+}
+
+.about {
+	top: 15%;
+	left: 15%;
+}
+
+.skills {
+	top: 10%;
+	right: 20%;
+}
+
+.works {
+	top: 45%;
+	right: 10%;
+}
+
+.contact {
+	bottom: 15%;
+	left: 10%;
+}
+
+/* キラキラ */
+
+.sparkle {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #ffe68a;
+	box-shadow:
+		0 0 10px #FFE68A,
+		0 0 20px #FFE68A,
+		0 0 30px #FFF4C4;
+
+	filter: blur(3px);
+
+	animation: twinkle 4s infinite;
+}
+
+.s1 {
+	top: 10%;
+	left: 20%;
+}
+
+.s2 {
+	top: 20%;
+	right: 30%;
+}
+
+.s3 {
+	top: 50%;
+	left: 10%;
+}
+
+.s4 {
+	bottom: 25%;
+	right: 15%;
+}
+
+.s5 {
+	bottom: 15%;
+	left: 40%;
+}
+
+.pink {
+	background: #ffd6e7;
+	box-shadow:
+		0 0 10px #ffd6e7,
+		0 0 20px #ffd6e7,
+		0 0 30px #fff0f5;
+}
+
+.p1 {
+	top: 6%;
+	right: 20%;
+}
+
+.p2 {
+	top: 6%;
+	left: 10%;
+}
+
+.p3 {
+	top: 60%;
+	left: 5%;
+}
+
+.p4 {
+	top: 78%;
+	left: 58%;
+}
+
+/* 	トプ画 */
+.profile {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.profile img {
+	width: 450px;
+}
+
+.portfolio-title {
+	position: absolute;
+	top: -40px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: 'Poiret One', cursive;
+	font-size: 3rem;
+	font-weight: bold;
+	color: #555;
+}
+
+/* フッター */
+
+footer {
+	position: fixed;
+	bottom: 15px;
+	left: 0;
+	width: 100%;
+
+	text-align: center;
+
+	font-size: 0.8rem;
+	letter-spacing: 0.1em;
+	color: #b8b0a5;
+}
+
+@keyframes twinkle {
+
+	0%,
+	100% {
+		opacity: .2;
+		transform: scale(.8);
+	}
+
+	50% {
+		opacity: 1;
+		transform: scale(1.4);
+	}
+}
+
+/*ダークモード対応 */
+
+
+body.dark-mode {
+	background-color: #2b2520;
+	color: #f5ede3;
+}
+
+body.dark-mode header h1,
+body.dark-mode header a {
+	color: #f5ede3;
+}
+
+body.dark-mode .portfolio-title,
+body.dark-mode .folder,
+body.dark-mode footer {
+	color: #f5ede3;
+}
+
+body.dark-mode .folder img {
+	filter: drop-shadow(0 0 15px rgba(255, 255, 255, .4));
+}
+
+body {
+	transition: 0.5s;
+}
+
+/* =========================
+   タブレット対応
+========================= */
+@media screen and (max-width: 1024px) {
+
+	.profile img {
+		width: 350px;
+	}
+
+	.portfolio-title {
+		font-size: 2.5rem;
+	}
+}
+
+/* =========================
+   スマホ対応
+========================= */
+@media screen and (max-width: 768px) {
+
+	/* 全体レイアウト */
+	.desktop {
+		height: auto;
+		min-height: 100vh;
+		overflow: visible;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 120px 20px 80px;
+		gap: 25px;
+	}
+
+	/* ヘッダー */
+	header {
+		padding: 15px 20px;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	header ul {
+		gap: 15px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	/* フォルダ（縦並び） */
+	.folder {
+		position: static;
+		margin-bottom: 20px;
+	}
+
+	.folder img {
+		width: 120px;
+	}
+
+	/* 中央プロフィール */
+	.profile {
+		position: static;
+		transform: none;
+		order: -1;
+		margin: 20px 0;
+		text-align: center;
+	}
+
+	.profile img {
+		width: 260px;
+	}
+
+	/* タイトル */
+	.portfolio-title {
+		position: static;
+		transform: none;
+		font-size: 2rem;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	/* キラキラ非表示 */
+	.sparkle {
+		display: none;
+	}
+
+	/* フッター */
+	footer {
+		position: static;
+		padding: 20px 0;
+		text-align: center;
+	}
+}
+
+
+.portfolio-title {
+	animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+
+
+@keyframes fadeFolder {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

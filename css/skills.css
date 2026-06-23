@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+.about-area {
+	margin-top: 180px;
+}
+
+.skills-area {
+	max-width: 900px;
+	margin: 120px auto;
+	padding: 0 40px;
+}
+
+.skill-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 40px;
+	margin-top: 50px;
+}
+
+.skill-card {
+	background: #fff;
+	border: 2px solid #8f2f36;
+	border-radius: 30px;
+	padding: 50px 30px;
+	text-align: center;
+	transition: .3s;
+}
+
+.skill-card img {
+	width: 130px;
+	height: 130px;
+	object-fit: contain;
+	margin-bottom: 20px;
+}
+
+.skill-card h3 {
+	font-size: 1.3rem;
+	color: #8f2f36;
+	margin-bottom: 10px;
+	font-weight: normal;
+	font-family: "Yu Mincho", serif;
+}
+
+.section-title {
+	font-family: "Poiret One", sans-serif;
+}
+
+.skill-card p {
+	font-size: 0.95rem;
+	line-height: 1.8;
+	color: #5b3d3d;
+	letter-spacing: normal;
+	text-align: left;
+}
+
+.skill-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+}
+
+
+/* スクロール表示 */
+
+.fade-up {
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 1.2s ease;
+	transform: 1.2s ease;
+}
+
+.fade-up.show {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* =========================
+   タブレット対応
+========================= */
+@media screen and (max-width: 1024px) {
+
+	.skills-area {
+		padding: 0 30px;
+	}
+
+	.skill-card {
+		padding: 40px 25px;
+	}
+
+	.skill-grid p {
+		text-align: center;
+	}
+}
+
+/* =========================
+   スマホ対応
+========================= */
+@media screen and (max-width: 768px) {
+
+	.skills-area {
+		margin: 100px auto 60px;
+		padding: 0 20px;
+	}
+
+	.skill-grid {
+		grid-template-columns: 1fr;
+		gap: 25px;
+	}
+
+	.skill-card {
+		padding: 30px 20px;
+	}
+
+	.skill-card img {
+		width: 100px;
+		height: 100px;
+	}
+
+	.skill-card h3 {
+		font-size: 1.2rem;
+	}
+
+	.skill-card p {
+		font-size: 0.9rem;
+		line-height: 1.7;
+	}
+
+	.section-title {
+		font-size: 1.8rem;
+		text-align: center;
+	}
+}
